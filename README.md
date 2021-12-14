@@ -1,2 +1,4 @@
 # Online-cookbook
-Online cookbook project
+University project
+HTML, CSS, JavaScript, PHP, MySql
+
