@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+:root {
+  --header-height: 3.5rem;
+
+  /* boi */
+  --yellow-color-light: #fefae0;
+  --yellow-color: #FDF5C4;
+  --yellow-color-dark: #F9E88B;
+  --dark-color: #32352b;
+  --green-color-light:   #E9EDDC;
+  --green-color: #ccd5ae;
+  --green-color-dark: #605C4E;
+  --brown-light:#faedcd;
+  --brown-dark:#d4a373;
+
+
+  --title-color: #19181b;
+  --text-color: #333533;
+  --text-color-light: #afaa9d;
+  --body-color: #fffdf881;
+
+  /* font */
+  --body-font: "Rubik", sans-serif;
+  --normal-font-size: 1.2rem;
+  --small-font-size: 1rem;
+  --smaller-font-size: 0.75rem;
+
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  --z-fixed: 100;
+}
+
+body {
+  font-family: var(--body-font);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: -webkit-linear-gradient(135deg, var(--yellow-color-light), #fff);
+}
+h1{
+    font-size: 2rem;
+    padding-left: 30%;
+    padding-bottom: 20px;
+}
+h5{
+    font-size: var(--small-font-size);
+}
+
+.container {
+    color: var(--text-color);
+  width: 800px;
+  display: grid;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  padding: 30px 30px;
+  margin: 20px 20px;
+}
+
+.input-group input {
+  width: 100%;
+  margin: 5px 2px;
+  border: 2px solid #e7e7e7;
+  padding: 5px 10px;
+  font-size: var(--small-font-size);
+  border-radius: 5px;
+  background: transparent;
+  outline: none;
+  transition: 0.3s;
+}
+.group1{
+    display: flex;
+    align-items: center;
+}
+.group1 input {
+    width: 50%;
+}
+.nmb input{
+    width: 40%;
+    align-items: center;
+}
+.input-group input:focus, .select-css:focus {
+  border-color: var(--green-color);
+}
+.container  .btn {
+  display: block;
+  width: 150px;
+  padding: 5px 5px;
+  text-align: center;
+  border: none;
+  background: var(--yellow-color);
+  outline: none;
+  border-radius: 5px;
+  color: var(--text-color);
+  cursor: pointer;
+  transition: 0.3s;
+  
+}
+
+.container  .btn:hover {
+  transform: translateY(-2px);
+  background: var(--brown-light);
+}
+.container .input-group .btn2 {
+  display: block;
+  width: 100%;
+  padding: 10px 20px;
+  text-align: center;
+  border: none;
+  background: -webkit-linear-gradient(right, #fdd995, #ccd5ae);
+  outline: none;
+  border-radius: 5px;
+  font-size: var(--normal-font-size);
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.container .input-group .btn2:hover {
+  transform: translateY(-5px);
+  background: -webkit-linear-gradient(right, #ccd5ae, #fdd995);
+}
+
+.section{
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    padding: 30px 30px;
+  margin: 20px 20px;
+}
+
+
+
+/* select  */
+.select-css {
+	display: block;
+	font-size: var(--small-font-size);
+	font-family: var(--body-font);
+	font-weight: var(--font-medium);
+	color: black;
+	line-height: 1.3;
+	padding: 5px 10px;
+	width: 50%;
+	max-width: 100%;
+	box-sizing: border-box;
+	margin: 2px 2px;
+	border: 2px solid #e7e7e7;
+	border-radius: 5px;
+	-moz-appearance: none;
+	
+}
+.select-css::-ms-expand {
+	display: none;
+}
+
+.select-css option {
+	font-weight:normal;
+}
+
+
+/* Disabled styles */
+.select-css:disabled, .select-css[aria-disabled=true] {
+	color: graytext;
+	background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22graytext%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'),
+	  linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%);
+}
+.select-css:disabled:hover, .select-css[aria-disabled=true] {
+	border-color: #aaa;
+}
+
+
+
+
+.custom-file-input::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.custom-file-input::before {
+  content: 'додај слика';
+  display: inline-block;
+  background: var(--yellow-color);
+  border-radius: 3px;
+  padding: 5px 8px;
+  outline: none;
+  white-space: nowrap;
+  cursor: pointer;
+  font-weight: var(--font-medium);
+  font-size: var(--small-font-size);
+  transition: 0.3s;
+}
+.custom-file-input:hover::before {
+  transform: translateY(-2px);
+  background: var(--brown-light);
+}
+.custom-file-input:active::before {
+  background: var(--brown-light)
+}

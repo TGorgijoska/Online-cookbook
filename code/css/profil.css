@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+/*===== VARIABLES CSS =====*/
+:root {
+  --header-height: 3.5rem;
+ /*===== Colors =====*/
+  --yellow-color-light: #fefae0;
+  --yellow-color: #FDF5C4;
+  --yellow-color-dark: #F9E88B;
+  --dark-color: #32352b;
+  --green-color-light:   #E9EDDC;
+  --green-color: #ccd5ae;
+  --green-color-dark: #605C4E;
+  --brown-light:#faedcd;
+  --brown-dark:#d4a373;
+
+  /*===== Colors =====*/
+  
+  --title-color: #19181b;
+  --text-color: #333533;
+  --text-color-light: #afaa9d;
+  --body-color: #fffdf881;
+
+  /*===== Font and typography =====*/
+  --body-font: "Rubik", sans-serif;
+  --bigger-font-size: 1.5rem;
+  --normal-font-size: 1rem;
+  --small-font-size: 0.75rem;
+  --smaller-font-size: 0.75rem;
+  /*========== Font weight ==========*/
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  /*===== z index =====*/
+  --z-fixed: 100;
+}
+
+body { 
+  margin-top: var(--header-height);
+  font-family: var(--body-font);
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: var(--normal-font-size);
+}
+h1 > span{
+  font-size: var(--bigger-font-size);
+  padding: 5px 20px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-gap: 0.5rem;
+  align-items: center;
+}
+.kolona {
+  display: grid;
+  grid-template-rows: repeat(auto-fill, minmax(100px, 1rem));
+  grid-gap: 2rem;
+  min-height: 100px;
+  padding: 40px 30px;
+  justify-self: start;
+  align-self: start;
+
+}
+.container .input-group {
+  width: auto;
+  height: 20px;
+  margin-bottom: 25px;
+  
+}
+
+.container .input-group input {
+  width: 200px;
+  height: 20px;
+  border: 2px solid #e7e7e7;
+  padding: 15px 20px;
+  font-size: var(--small-font-size);
+  border-radius: 5px;
+  background: transparent;
+  outline: none;
+  transition: 0.3s;
+}
+
+.container .input-group input:focus {
+  border-color: var(--green-color);
+}
+
+.container .input-group .btn,
+.container .input-group .btn-z,
+a > .btn {
+  display: block;
+  width: 250px;
+  height: 30px;
+  padding: 5px 20px;
+  text-align: center;
+  border: none;
+  background: var(--green-color);
+  outline: none;
+  border-radius: 5px;
+  font-size: var(--normal-font-size);
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.container .input-group .btn-z{
+  background: -webkit-linear-gradient(right, #fdd995, #ccd5ae);
+}
+.container .input-group .btn-z:hover{
+   background: -webkit-linear-gradient(right, #ccd5ae, #fdd995);
+  transform: translateY(-3px);
+}
+.container .input-group .btn:hover, 
+a > .btn:hover {
+  transform: translateY(-3px);
+  background: var(--green-color-dark);
+}
+
+@media screen and (max-width: 768px) {
+  h1 > span{
+    padding: 5px 5px;
+  }
+  .container {
+    grid-template-columns: 100%;
+  }
+  .kolona {
+    grid-template-rows: auto;
+  }
+}
+@media screen and (max-width: 320px) {
+  
+  .container {
+    display: list-item;
+    list-style-type: none;
+    align-items: start;
+  }
+  .container .input-group {
+    width: auto;
+  }
+  .container .input-group .btn {
+    width: 250px;
+  }
+}

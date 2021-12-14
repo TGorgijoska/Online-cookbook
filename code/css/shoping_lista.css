@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+:root {
+  --header-height: 3.5rem;
+
+  /* boi */
+  --yellow-color-light: #fefae0;
+  --yellow-color: #FDF5C4;
+  --yellow-color-dark: #F9E88B;
+  --dark-color: #32352b;
+  --green-color-light:   #E9EDDC;
+  --green-color: #ccd5ae;
+  --green-color-dark: #605C4E;
+  --brown-light:#faedcd;
+  --brown-dark:#d4a373;
+
+  --title-color: #19181b;
+  --text-color: #333533;
+  --text-color-light: #afaa9d;
+  --body-color: #fffdf881;
+
+  /* font */
+  --body-font: "Rubik", sans-serif;
+  --normal-font-size: 1rem;
+  --small-font-size: 0.75rem;
+  --smaller-font-size: 0.75rem;
+
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  --z-fixed: 100;
+}
+body{
+  color: var(--text-color);
+  background: -webkit-linear-gradient(135deg, var(--yellow-color-light), #fff);
+}
+
+
+.koloni {
+  margin: 2% 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  justify-items: center;
+  
+}
+.red {
+  display: grid;
+  width: 80%;
+  min-height: 400px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+  padding: 40px 30px;
+}
+.input-ime{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+}
+.input-group input {
+  width: 150px;
+  height: 30px;
+  border: 2px solid #e7e7e7;
+  margin: 10px 10px;
+  padding: 15px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  background: transparent;
+  outline: none;
+  transition: 0.3s;
+}
+
+li {
+  list-style-type: circle;
+}
+.sostojka_lista {
+  margin-left: 20px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.btn {
+  padding: 9px 25px;
+  background-color: var(--brown-light);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.btn:hover {
+  background-color:var(--yellow-color);
+}
+
+.button {
+  background-color: transparent;
+  border: none;
+  color: rgb(0, 0, 0);
+  padding: 12px 16px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.button:hover {
+  background-color: transparent;
+  color: var(--green-color-dark);
+}
+
+@media screen and (max-width: 768px){
+  .koloni {
+    width: 100%;
+    grid-template-columns: auto;
+  }
+  .red {
+    margin: 20px 0px;
+    padding: 40px 30px;
+  }
+}

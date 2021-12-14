@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+:root {
+  --header-height: 3.5rem;
+
+  /* boi */
+  --yellow-color-light: #fefae0;
+  --yellow-color: #FDF5C4;
+  --yellow-color-dark: #F9E88B;
+  --dark-color: #32352b;
+  --green-color-light:   #E9EDDC;
+  --green-color: #ccd5ae;
+  --green-color-dark: #605C4E;
+  --brown-light:#faedcd;
+  --brown-dark:#d4a373;
+
+  /* font */
+  --body-font: "Rubik", sans-serif;
+  --normal-font-size: 1rem;
+  --small-font-size: 0.75rem;
+  --smaller-font-size: 0.75rem;
+
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  --z-fixed: 100;
+}
+
+/* ОПШТО */
+
+body {
+  font-family: var(--body-font);
+}
+
+.wrapper {
+  padding: 1rem;
+}
+
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* ВНЕС НА ПОДАТОЦИ */
+.input-group{
+  display: flex;
+  justify-content: center;
+  padding:10px 10px;
+  align-items: center;
+}
+.input-group .input {
+  width: 300px;
+  height: 15px;
+  border: 2px solid var(--yellow-color-light);
+  padding: 15px 20px;
+  font-size: var(--small-font-size);
+  border-radius: 30px;
+  background: transparent;
+  outline: none;
+  transition: 0.3s;
+}
+.input-group .input:focus {
+  border-color: var(--green-color-dark);
+}
+.input-group .btn {
+  display: block;
+  width: 200px;
+  height: 30px;
+  padding: 5px 5px;
+  margin: 0 10px;
+  text-align: center;
+  border: none;
+  background: var(--yellow-color);
+  outline: none;
+  border-radius: 20px;
+  color: var(--text-color);
+  cursor: pointer;
+  transition: 0.3s;
+  
+}
+
+.input-group .btn:hover {
+  transform: translateY(-2px);
+  background: var(--brown-light);
+}
+
+/* ЗАДАЧИ / КОЛОНИ */
+
+.column__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  grid-gap: 1rem;
+  align-items: start;
+}
+
+.column__item {
+  display: grid;
+  border-radius: 0.2rem;
+  background-color:white;
+  padding: 0.5rem;
+  border-radius: 3px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  align-self: center;
+  min-height: 300px;
+}
+
+.column__title--wrapper {
+    background-color: var(--yellow-color-light);
+  font-weight: bold;
+  display: grid;
+  padding: 0.25rem;
+  justify-content: flex-start;
+  align-items: center;
+}
+.recept_slika {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+i {
+  padding-left: 5px;
+}
+hr {
+  height: 1px;
+}
+
+.detali {
+  margin: 2px 0;
+  display: grid;
+  background-color: var(--yellow-color-light);
+  width: 100%;
+  height: 20px;
+  font-size: var(--small-font-size);
+  text-align: start;
+  align-items: center;
+}
+@media screen and (max-width: 868px) {
+
+  .input-group .btn, .input-group .input{
+    width: 150px;
+    height: 40px;
+    margin: 0 2px;
+  }
+
+}
